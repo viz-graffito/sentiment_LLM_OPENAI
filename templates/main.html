@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <style>
+        .form-container {
+            display: inline-block;
+            width: 45%; /* Adjust as needed */
+            margin-right: 20px; /* Adjust as needed */
+        }
+    </style>    
+</head>
+<body>
+
+<div class="form-container">
+    <h1>User</h1>
+    <form action="/perform_sentiment" method="post">
+        <label>Type your text here</label>
+        <textarea name="text" id="text" cols="30" rows="10" placeholder="Enter the text here"></textarea><br>
+        <input type="submit" value="Send">
+    </form>
+</div>
+
+<div class="form-container">
+    <h1>Ai</h1>
+    <form action="/perform_sentiment" method="post">
+        <label>Type your text here</label>
+        <textarea name="text" id="text" cols="30" rows="10" placeholder="Enter the text here"></textarea><br>
+        <input type="submit" value="Send">
+    </form>
+
+</div>
+    <h2>Sentiment Analysis</h2>
+    <p>{{ response }}</p>
+    <p>{{ chat_log }}</p>
+    <p>{{ psychological_response_user }}</p>
+    <p>{{ psychological_response_ai }}</p>
+
+</body>
+</html>
+
